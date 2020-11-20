@@ -16,6 +16,8 @@ public interface CommonController<T, Id> {
 
   Id getId();
 
+  T getId(T entity);
+
   default void getEntities() throws SQLException {
 
     List<T> entities = getService().findAll();
@@ -34,13 +36,14 @@ public interface CommonController<T, Id> {
   }
 
   default void setEntity() throws SQLException, IOException {
-    T apartament = inputEntity();
-    System.out.println(getService().create(apartament));
+    T entity = inputEntity();
+    System.out.println(getService().create(entity));
   }
 
   default void putEntity() throws SQLException, IOException {
-    T apartament = inputEntity();
-    getService().update(apartament);
+    T entity = inputEntity();
+    T entityWithId = getId(entity);
+    getService().update(entityWithId);
   }
 
   default int removeEntity() throws SQLException {

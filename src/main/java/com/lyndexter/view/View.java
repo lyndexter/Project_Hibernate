@@ -174,7 +174,7 @@ public class View {
       printMenu();
       System.out.println("Please, select point:");
       keyMenu = input.nextLine().toUpperCase();
-      while (keyMenu.equals("")) {
+      while (!(keyMenu.matches("(^\\d)") || keyMenu.equals("Q"))) {
         keyMenu = input.nextLine().toUpperCase();
       }
 
@@ -182,7 +182,7 @@ public class View {
         printSubMenu(keyMenu);
         System.out.println("Please select point of menu:");
         keyMenu = input.nextLine().toUpperCase();
-        while (keyMenu.equals("")) {
+        while (!(keyMenu.matches("(^\\d{2})") || keyMenu.equals("Q") || keyMenu.equals("L"))) {
           keyMenu = input.nextLine().toUpperCase();
         }
       }

@@ -54,4 +54,11 @@ public class ApartamentReservedControllerImpl implements ApartamentReservedContr
     System.out.println("\nPlease write id of ApartamentReserved:");
     return input.nextInt();
   }
+
+  @Override
+  public ApartamentReserved getId(ApartamentReserved entity) {
+    System.out.println("\nPlease write id of ApartamentReserved:");
+    entity.setId(input.nextInt());
+    return entity;
+  }
 }

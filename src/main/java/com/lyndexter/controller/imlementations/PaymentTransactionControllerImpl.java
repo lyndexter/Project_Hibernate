@@ -52,4 +52,11 @@ public class PaymentTransactionControllerImpl implements PaymentTransactionContr
     System.out.println("\nPlease write id of PaymentTransactions:");
     return input.nextInt();
   }
+
+  @Override
+  public PaymentTransaction getId(PaymentTransaction entity) {
+    System.out.println("\nPlease write id of PaymentTransactions:");
+    entity.setId(input.nextInt());
+    return entity;
+  }
 }

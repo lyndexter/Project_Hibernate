@@ -57,4 +57,11 @@ public class RenterControllerImpl implements RenterController {
     System.out.println("\nPlease write id of Renter:");
     return input.nextInt();
   }
+  
+  @Override
+  public Renter getId(Renter entity) {
+    System.out.println("\nPlease write id of Renter:");
+    entity.setId( input.nextInt());
+    return entity;
+  }
 }

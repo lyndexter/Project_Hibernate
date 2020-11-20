@@ -44,4 +44,11 @@ public class ResponseControllerImpl implements ResponseController {
     System.out.println("\nPlease write id of Response:");
     return input.nextInt();
   }
+
+  @Override
+  public Response getId(Response entity) {
+    System.out.println("\nPlease write id of Response:");
+    entity.setId(input.nextInt());
+    return entity;
+  }
 }

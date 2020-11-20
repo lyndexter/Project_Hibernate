@@ -62,6 +62,13 @@ public class PhotoControllerImpl implements PhotoController {
   @Override
   public Integer getId() {
     System.out.println("\nPlease type id of element:");
-    return Integer.parseInt(input.nextLine());
+    return input.nextInt();
+  }
+
+  @Override
+  public Photo getId(Photo entity) {
+    System.out.println("\nPlease type id of element:");
+    entity.setId(input.nextInt());
+    return entity;
   }
 }
