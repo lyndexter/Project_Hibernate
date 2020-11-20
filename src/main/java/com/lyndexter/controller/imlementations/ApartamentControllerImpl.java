@@ -61,4 +61,11 @@ public class ApartamentControllerImpl implements ApartamentController {
     System.out.println("\nPlease write id of Apartament:");
     return input.nextInt();
   }
+
+  @Override
+  public Apartament getId(Apartament entity) {
+    System.out.println("\nPlease write id of Apartament:");
+    entity.setId(input.nextInt());
+    return entity;
+  }
 }

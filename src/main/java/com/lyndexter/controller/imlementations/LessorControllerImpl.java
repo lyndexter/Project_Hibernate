@@ -59,4 +59,11 @@ public class LessorControllerImpl implements LessorController {
     System.out.println("\nPlease write id of lessor:");
     return input.nextInt();
   }
+
+  @Override
+  public Lessor getId(Lessor entity) {
+    System.out.println("\nPlease write id of lessor:");
+    entity.setId(input.nextInt());
+    return entity;
+  }
 }

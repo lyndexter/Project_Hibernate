@@ -4,10 +4,10 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/sample</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/airbnb</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.username">sample</property>
-        <property name="connection.password">sample</property>
+        <property name="connection.username">seller</property>
+        <property name="connection.password"></property>
 
         <mapping class="com.lyndexter.model.Apartament"/>
         <mapping class="com.lyndexter.model.ApartamentReserved"/>
